@@ -20,7 +20,7 @@
           <li><a href="#pricing"> Pricing</a></li>
           <li><a href="#contact"> Contact </a></li>
           <li><a class="button-login" href="https://app.jurismanager.com/index.html"> Sign In </a></li>
-          <li><a class="button-login" href=""> Try for free</a></li>
+          <li><a class="button-login" id="form-button"> Try for free</a></li>
         </ul>
       </nav>
   </div>
@@ -105,6 +105,19 @@
   </div>
 </section>
 
+<div id="form" class="sign-up">
+  <form class="sign-form" action="">
+    <span class="close-btn">&times;</span>
+    <h2>Sign up for free.</h2>
+    <hr>
+    <input type="text" placeholder="Full Name" name="" required>
+    <input type="text" placeholder="Firm Name" name="" required>
+    <input type="text" placeholder="Firm Size" name="" required>
+    <input type="email" placeholder="E-mail" name="" required>
+    <button type="submit" class="button button-account">Create account</button>  
+  </form>
+</div>
+
 <section class="inquiry">
   <a name="contact"></a>
   <div class="inquiry-phone"> Request for demo? <i class="fal fa-envelope" aria-hidden="true"></i> &#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#109;&#097;&#110;&#097;&#103;&#101;&#114;&#046;&#099;&#111;&#109; </div>
@@ -157,6 +170,23 @@
       return false;
     })
   })
+
+  var modalBtn = document.getElementById("form-button")
+  modalBtn.onclick = function(){
+    modal.style.display = "block"
+  }
+
+  var closeBtn = document.querySelector(".close-btn")
+  closeBtn.onclick = function(){
+  modal.style.display = "none"  
+  }
+
+  var modal = document.querySelector(".sign-up")
+  window.onclick = function(e){
+    if(e.target == modal){
+      modal.style.display = "none"
+    }
+  }
 </script>
 </body>
 </html>
