@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<a class="nav-trigger" class="#"> <i class="fas fa-bars"></i> MENU </a> 
+<a class="nav-trigger" class="#"> <i class="fas fa-bars"></i> </a> 
 <section class="container">
   <div class="menu-flex">
       <div class="logo"> <a href=""><img src="img/jurismanager.png" width="280" alt="legal software malaysia"></a> </div>
@@ -91,7 +91,7 @@
         <p class="per">per user / month</p>
         <a class="button button-trial">Free 60-Day Trial</a>
       </div>
-    </div>
+    </div><br>
   </div>
 </section>
 
@@ -172,16 +172,17 @@
   })
 
   var modalBtn = document.getElementById("form-button")
+  var modal = document.querySelector(".sign-up")
+  var closeBtn = document.querySelector(".close-btn")
+
   modalBtn.onclick = function(){
     modal.style.display = "block"
   }
 
-  var closeBtn = document.querySelector(".close-btn")
   closeBtn.onclick = function(){
   modal.style.display = "none"  
   }
-
-  var modal = document.querySelector(".sign-up")
+  
   window.onclick = function(e){
     if(e.target == modal){
       modal.style.display = "none"
