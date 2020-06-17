@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<a class="nav-trigger" class="#"> MENU </a> 
+<a class="nav-trigger" class="#"> <i class="fas fa-bars"></i> </a> 
 <section class="container">
   <div class="menu-flex">
-      <div class="logo"> <a href="/"><img src="img/jurismanager.png" width="280" alt="legal software malaysia"></a> </div>
+      <div class="logo"> <a href=""><img src="img/jurismanager.png" width="280" alt="legal software malaysia"></a> </div>
       <nav>
         <ul>
           <li><a href="#features"> Features </a></li>
-          <li><a href="#faq"> FAQ </a></li>
+          <li><a href="#pricing"> Pricing</a></li>
           <li><a href="#contact"> Contact </a></li>
           <li><a class="button-login" href="https://app.jurismanager.com/index.html"> Sign In </a></li>
+          <li><a class="button-login" id="form-button"> Try for free</a></li>
         </ul>
       </nav>
   </div>
@@ -77,12 +78,58 @@
 
 </section>
 
+<section class="pricing">
+  <a name="pricing"></a>
+  <div class="container grid-pricing">
+    <div class="grid-price">
+        <h1 class="pricing-title">Bring <span style="color:#181b39;">Juris Manager</span> <br>to your firm</h1>
+   </div>
+   <div class="grid-price">
+      <div class="pricing-card">
+        <h2>Juris Manager's Monthly Fee</h2>
+        <h1><span class="tiny">average</span><sup> MYR</sup> 1<span class="small">.00</span></h1>
+        <p class="per">per user / month</p>
+        <a class="button button-trial">Free 60-Day Trial</a>
+      </div>
+    </div><br>
+  </div>
+</section>
+
+<section class="client">
+  <div>
+    <h1><span class="client-title">Our</span> Clients</h1>
+    <div class="grid-client">
+      <div class="grid-item"></div>
+      <div class="grid-item"><img src="img/rycolawfirm.png" alt="RYCO Law Firm" width="200px"></div>
+    </div>
+  </div>
+</section>
+
+<div id="form" class="sign-up">
+  <form class="sign-form" action="">
+    <span class="close-btn">&times;</span>
+    <h2>Sign up for free.</h2>
+    <hr>
+    <input type="text" placeholder="Full Name" name="" required>
+    <input type="text" placeholder="Firm Name" name="" required>
+    <input type="text" placeholder="Firm Size" name="" required>
+    <input type="email" placeholder="E-mail" name="" required>
+    <button type="submit" class="button button-account">Create account</button>  
+  </form>
+</div>
+
 <section class="inquiry">
   <a name="contact"></a>
-  <a name="faq"></a>
   <div class="inquiry-phone"> Request for demo? <i class="fal fa-envelope" aria-hidden="true"></i> &#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#109;&#097;&#110;&#097;&#103;&#101;&#114;&#046;&#099;&#111;&#109; </div>
-  <div> Monday to Friday from 9AM to 5PM </div>
+  <div> Monday to Friday from 9AM to 5PM </div><br>
+  <div class="inquiry-fb">
+    <b>Find Us on </b><br>
+    <a href="https://fb.com/jurismanager" target="blank">
+      <i class="fab fa-facebook"> Juris Manager</i>
+    </a>
+  </div>
 </section>
+
 <section class="footer">
   <div class="footer-grid">
     <div>
@@ -94,11 +141,18 @@
       <br><br><br>
     </div>
     <div>
+      <i class="fas fa-map-marker-alt"></i>
       <strong> Office </strong> <br> No. 1-2-1B, 2nd Floor, Block B, <br>
       Kolam Centre Phase II, Jalan Lintas, Luyang, <br>
       88300 Kota Kinabalu, Sabah, Malaysia. <br><br>
       <a href="https://goo.gl/maps/akGYbStgbT12"> Google Map </a>
       <br><br>
+      <strong> Follow us </strong><br>
+      <a href="https://fb.com/jurismanager" target="blank"><i class="fab fa-facebook-f fa-2x"></i> </a> &nbsp;
+      <a href=""><i class="fab fa-youtube fa-2x"></i></a>
+      <br><br>
+    </div>
+    <div>
     </div>
   </div>
 </section>
@@ -107,6 +161,7 @@
     &copy; 2020 Phi Software Sdn Bhd
   </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
@@ -115,6 +170,24 @@
       return false;
     })
   })
+
+  var modalBtn = document.getElementById("form-button")
+  var modal = document.querySelector(".sign-up")
+  var closeBtn = document.querySelector(".close-btn")
+
+  modalBtn.onclick = function(){
+    modal.style.display = "block"
+  }
+
+  closeBtn.onclick = function(){
+  modal.style.display = "none"  
+  }
+  
+  window.onclick = function(e){
+    if(e.target == modal){
+      modal.style.display = "none"
+    }
+  }
 </script>
 </body>
 </html>
