@@ -28,7 +28,7 @@
 <section class="header">
   <div class="container"> 
      <div class="tagline">
-      Simplify legal management with Juris Manager.
+      Simplify legal management with <span style="color: #c97413;">Juris Manager</span>.
      </div>
      <div class="tagline-info">
         Juris Manager is a cloud legal management software designed with close collaboration with local legal firm.
@@ -89,7 +89,7 @@
         <h2>Juris Manager's Monthly Fee</h2>
         <h1><span class="tiny">average</span><sup> MYR</sup> 1<span class="small">.00</span></h1>
         <p class="per">per user / month</p>
-        <a class="button button-trial">Free 60-Day Trial</a>
+        <a class="button button-trial" id=button-free>Free 60-Day Trial</a>
       </div>
     </div><br>
   </div>
@@ -112,8 +112,15 @@
     <hr>
     <input type="text" placeholder="Full Name" name="" required>
     <input type="text" placeholder="Firm Name" name="" required>
-    <input type="text" placeholder="Firm Size" name="" required>
-    <input type="email" placeholder="E-mail" name="" required>
+    <select required> 
+      <option value="" disabled selected hidden>Select firm size</option>
+      <option value="">1 - 5</option>
+      <option value="">5 - 10</option>
+      <option value="">10 - 30</option>
+      <option value="">30 -50</option>
+      <option value="">> 50</option>
+    </select>
+    
     <button type="submit" class="button button-account">Create account</button>  
   </form>
 </div>
@@ -172,10 +179,15 @@
   })
 
   var modalBtn = document.getElementById("form-button")
+  var freeBtn = document.getElementById("button-free")
   var modal = document.querySelector(".sign-up")
   var closeBtn = document.querySelector(".close-btn")
 
   modalBtn.onclick = function(){
+    modal.style.display = "block"
+  }
+
+  freeBtn.onclick = function(){
     modal.style.display = "block"
   }
 
