@@ -20,7 +20,6 @@
           <li><a href="#pricing"> Pricing</a></li>
           <li><a href="#contact"> Contact </a></li>
           <li><a class="button-login" href="https://app.jurismanager.com/index.html"> Sign In </a></li>
-          <li><a class="button-login" id="form-button"> Try for free</a></li>
         </ul>
       </nav>
   </div>
@@ -28,12 +27,12 @@
 <section class="header">
   <div class="container"> 
      <div class="tagline">
-      Simplify legal management with Juris Manager.
+      Simplify legal management with <span style="color: #c97413;">Juris Manager</span>.
      </div>
      <div class="tagline-info">
         Juris Manager is a cloud legal management software designed with close collaboration with local legal firm.
         Find out how JM can improve your legal practice. <br><br>
-        <a class="button button-primary" href="https://share.hsforms.com/1OwPlh275Sja--KtllzoaLA2qg10"> Schedule a demo </a>
+        <a class="button button-primary" href="https://share.hsforms.com/1OwPlh275Sja--KtllzoaLA2qg10"> Start free trial now </a>
      </div>
   </div>
 </section>
@@ -89,7 +88,7 @@
         <h2>Juris Manager's Monthly Fee</h2>
         <h1><span class="tiny">average</span><sup> MYR</sup> 1<span class="small">.00</span></h1>
         <p class="per">per user / month</p>
-        <a class="button button-trial">Free 60-Day Trial</a>
+        <a class="button button-trial" id=button-free>Free 60-Day Trial</a>
       </div>
     </div><br>
   </div>
@@ -112,12 +111,19 @@
     <hr>
     <input type="text" placeholder="Full Name" name="" required>
     <input type="text" placeholder="Firm Name" name="" required>
-    <input type="text" placeholder="Firm Size" name="" required>
-    <input type="email" placeholder="E-mail" name="" required>
+    <select required> 
+      <option value="" disabled selected hidden>Select firm size</option>
+      <option value="">1 - 5</option>
+      <option value="">5 - 10</option>
+      <option value="">10 - 30</option>
+      <option value="">30 -50</option>
+      <option value="">> 50</option>
+    </select>
     <button type="submit" class="button button-account">Create account</button>  
   </form>
 </div>
 
+ <!--
 <section class="inquiry">
   <a name="contact"></a>
   <div class="inquiry-phone"> Request for demo? <i class="fal fa-envelope" aria-hidden="true"></i> &#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#109;&#097;&#110;&#097;&#103;&#101;&#114;&#046;&#099;&#111;&#109; </div>
@@ -129,31 +135,47 @@
     </a>
   </div>
 </section>
+ -->
 
 <section class="footer">
   <div class="footer-grid">
-    <div>
-      <strong> We are hiring </strong> <br>
-      Graphic/UX Designer <br>
-      Sales &amp; Marketing <br>
-      Internship <br><br>
-      Email your CV to &#105;&#110;&#102;&#111;&#064;&#106;&#117;&#114;&#105;&#115;&#109;&#097;&#110;&#097;&#103;&#101;&#114;&#046;&#099;&#111;&#109;
-      <br><br><br>
+    <div class="link">
+      <strong>Juris Manager</strong><br>
+      <a href="#features">Features</a><br>
+      <a href="#pricing">Pricing</a><br>
+      <a href="#contact">Contact</a><br>
+      <a href="">Schedule a demo</a><br><br>
+      
     </div>
+    
     <div>
+
+      <i class="fas fa-envelope"></i>
+      <strong>E-mail</strong><br>
+      info@jurismanager.com 
+      <br><br>
+      
       <i class="fas fa-map-marker-alt"></i>
-      <strong> Office </strong> <br> No. 1-2-1B, 2nd Floor, Block B, <br>
+      <strong> Office </strong> <br> 
+      No. 1-2-1B, 2nd Floor, Block B, <br>
       Kolam Centre Phase II, Jalan Lintas, Luyang, <br>
       88300 Kota Kinabalu, Sabah, Malaysia. <br><br>
-      <a href="https://goo.gl/maps/akGYbStgbT12"> Google Map </a>
-      <br><br>
-      <strong> Follow us </strong><br>
-      <a href="https://fb.com/jurismanager" target="blank"><i class="fab fa-facebook-f fa-2x"></i> </a> &nbsp;
-      <a href=""><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="https://goo.gl/maps/akGYbStgbT12" class="map"> Google Map </a>
       <br><br>
     </div>
+    
     <div>
+      <i class="fas fa-clock"></i>
+      <strong>Opening hours</strong><br>
+      Monday - Friday  &nbsp; 9AM - 5PM
+      <br><br>
+
+      <strong> Follow us </strong><br>
+      <a href="https://fb.com/jurismanager" target="blank" class="fb"><i class="fab fa-facebook fa-2x"></i> </a> 
+      <a href="" class="youtube"><i class="fab fa-youtube fa-2x"></i></a>
+      <br><br>
     </div>
+    
   </div>
 </section>
 <div class="copyright">
@@ -172,10 +194,15 @@
   })
 
   var modalBtn = document.getElementById("form-button")
+  var freeBtn = document.getElementById("button-free")
   var modal = document.querySelector(".sign-up")
   var closeBtn = document.querySelector(".close-btn")
 
   modalBtn.onclick = function(){
+    modal.style.display = "block"
+  }
+
+  freeBtn.onclick = function(){
     modal.style.display = "block"
   }
 
