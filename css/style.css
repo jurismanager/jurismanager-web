@@ -503,6 +503,33 @@ p {
   width: 400px !important;
 }
 
+.bg-footer {
+  background-color: #ddd;
+}
+
+.pad-footer {
+  padding: 40px 0 40px 0 !important;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.txt-c {
+  color: grey;
+}
+
+.txt-t {
+  color:#555;
+}
+
+.link-c {
+  color: grey;
+  text-decoration: none !important;
+}
 
 /*!
  * Font Awesome Pro 5.0.8 by @fontawesome - https://fontawesome.com
@@ -538,7 +565,7 @@ nav a{text-decoration:none;color:#00008b;font-size:1.1em}.login a{text-decoratio
   margin-top:30px;
 }
 
-.pricing-title{color:#ddd;line-height:2em;font-size:2em;}
+.pricing-title{color:#fff;line-height:2em;font-size:2em;}
 .pricing-card{text-align:center;box-shadow: 0 10px 20px #111;background-color:#ddd;max-width:500px;margin:auto;padding:1.6em;}.pricing-card:hover{z-index:3;transform: scale(1.025);}.small{font-size:.8em;}sup{font-size:.6em;}.per{color:#666;font-size:.9em;}.tiny{color: #666;font-size:.4em;}.button-trial{background-color:#181b39 !important;font-size:.8em;border:none}.grid-pricing {display: grid;grid-template-columns: 1fr;grid-column-gap:10px;grid-row-gap: 10px;padding:1em;}.client{text-align: center;padding: 1em;}.client-title{border-bottom:3px solid black;}.grid-client{display:grid;grid-template-columns:1fr;grid-column-gap:10px;grid-row-gap: 10px;padding:10px; margin: auto;}.grid-item {padding: 10px;}
 .inquiry{margin-top:40px;padding:1em;border-top:1px solid #efefef;text-align:center;color:#666}.inquiry-phone{color:#444;font-size:1.4em}.inquiry-fb{color:#111;font-size:1.6em;line-height: 3rem;}.inquiry-fb a:hover{opacity:.8;}.inquiry-fb a{color: #111;}.sign-up {display:none;position:fixed;z-index:10; left: 0;top: 0;width:100%;height:100%;overflow:auto;background-color: rgba(0, 0, 0, 0.8);padding-top:50px;}.sign-form {padding: 2em;background-color: #fefefe;margin: 5% auto 10% auto;border: 1px solid #888;max-width:500px;}hr{border: 1px solid #f1f1f1;margin-bottom: 20px;}input[type=text],input[type=email],select{width: 100%;padding:.7em;margin: 5px 0 15px 0;display: inline-block;border:none;background:#f1f1f1;border-radius:4px;}input[type=text]:focus, input[type=email]:focus{background-color: #ddd; outline: none;border:1px solid #007eca;}select:invalid{color: gray;}.button-account{border: none;font-size: .9em;background-color: #c97413;width: 100%;margin-top: 10px;}.close-btn {float: right;color: #888;font-size: 2em; font-weight: bold;cursor: pointer;} .footer{background-color:#ddd}.footer-grid{display:grid;grid-template-columns:1fr;grid-template-rows:1fr;grid-column-gap:45px;color:#555;font-size:1em;margin:0 auto;max-width:960px;margin-top:10px;padding:1.5em;padding-top:70px;line-height:1.4em;}.footer-grid a{color:#888;text-decoration:none}.footer-grid i{padding:.2em;}.link a{line-height:1.6em;color:#555;}.copyright{background-color:#f0f0f0;color:#aaa;font-size:.8em;padding:.8em}.contact{background-color:#007eca;opacity:.8;padding:.5em;color:#fff;text-align:center;font-size:1.2em}.dropbox-auth{text-align:center;margin:10em;}.whatsapp{font-size:18pt;display:inline;color:#008000}@media (min-width:768px){.tagline-info{font-size:1.1em;max-width:650px;margin: 0 auto;}.pricing{padding: 2em;margin-top:40px;}.pricing-title{font-size:40px;}.grid-pricing{grid-template-columns: 1fr 1fr;}.grid-client{max-width:800px;grid-template-columns: 1fr 1fr 1fr;}.footer-grid{grid-template-columns: 1fr 1fr 1fr;}}@media (min-width:926px){.menu-flex{flex-direction:row}.nav-trigger{display:none}nav{display:block}nav ul{flex-direction:row}.button-login{display:block}nav a:hover{opacity:none;}.tagline{font-size:2.2em;}.fb:hover{color: #3b5998;}.youtube:hover{color:#e52d27}.link a:hover{color: #c97413;}}
 
